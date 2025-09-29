@@ -42,7 +42,10 @@ spring:
           auth: true
           timeout: 5000
           starttls:
+            required: true
             enable: true
+          ssl:
+            trust: smtp.gmail.com
 
   security:
     user:
