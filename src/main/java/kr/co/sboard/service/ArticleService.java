@@ -37,8 +37,12 @@ public class ArticleService {
     }
 
     public void save(ArticleDTO articleDTO){
+
         Article article = modelMapper.map(articleDTO, Article.class);
         articleRepository.save(article);
+
+        // 파일 업로드
+
     }
 
     public void modify(ArticleDTO articleDTO){

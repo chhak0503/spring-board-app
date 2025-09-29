@@ -4,9 +4,8 @@
         <nav>
             <h1>글쓰기</h1>
         </nav>
-        <form th:action="@{/article/write}" method="post">
-            <input name="writer">
-            <input name="reg_ip">
+        <form th:action="@{/article/write}" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="writer" th:value="${#authentication.principal.user.usid}">
             <table border="0">
                 <tr>
                     <th>제목</th>
