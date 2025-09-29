@@ -31,6 +31,19 @@ spring:
         format_sql: true
         show_sql: true
 
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: chhak0503@gmail.com
+    password: khcalwkoosdwtknt
+    properties:
+      mail:
+        smtp:
+          auth: true
+          timeout: 5000
+          starttls:
+            enable: true
+
   security:
     user:
       name: user
