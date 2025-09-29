@@ -4,8 +4,10 @@ import com.sun.jdi.event.ExceptionEvent;
 import jakarta.mail.Message;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -23,6 +25,9 @@ public class EmailService {
 
     @Value("${spring.mail.username}")
     private String sender;
+
+    @Autowired
+    private HttpSession session;
 
     public void sendCode(String receiver){
 
@@ -42,9 +47,25 @@ public class EmailService {
             // 메일 전송
             mailSender.send(message);
 
+            // 현재 세션 저장(현재 클라이언트)
+            session.setAttribute("sessCode", String.valueOf(code));
+
         }catch (Exception e){
             log.error(e.getMessage());
         }
+    }
+
+
+    public boolean verifyCode(String code){
+
+        // 현재 세션 코드 가져오기
+        String sessCode = (String) session.getAttribute("sessCode");
+
+        if(sessCode.equals(code)){
+            return true;
+        }
+
+        return false;
     }
 
 

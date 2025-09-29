@@ -212,13 +212,15 @@ document.addEventListener('DOMContentLoaded', function(){
 		
 		const code = form.auth.value;
 		
-		// 쿼리 문자열 생성해서 POST body로 전송
-		const params = new URLSearchParams();
-		params.append("code", code);
+		// JSON 생성
+		const jsonData = {
+            "code": code
+        };
 		
-		const response = await fetch('/jboard/user/check.do', {
-			method: 'POST',				
-			body: params
+		const response = await fetch('/sboard/email/code', {
+			method: 'POST',
+            headers: {"Content-Type": "application/json"},
+			body: JSON.stringify(jsonData)
 		});
 		
 		const data = await response.json();			
@@ -250,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			return;
 		}
 		
-		fetch('/jboard/user/check.do?col=hp&value='+value)
+		fetch(`/sboard/user/hp/${value}`)
 			.then(res => res.json())
 			.then(data => {
 				console.log(data);
