@@ -1,8 +1,8 @@
-<div th:replace="~{/user/_head.html}"></div>
+<div th:replace="~{user/_head.html}"></div>
 <main id="user">
     <section class="register">
 
-        <form action="#">
+        <form th:action="@{/user/register}" method="post">
             <h2 class="tit">사이트 이용정보 입력</h2>
             <table border="1">
                 <tr>
@@ -75,4 +75,4 @@
 
     </section>
 </main>
-<div th:replace="~{/user/_tail.html}"></div>
+<div th:replace="~{user/_tail.html}"></div>
