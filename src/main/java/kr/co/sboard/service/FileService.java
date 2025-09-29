@@ -2,8 +2,10 @@ package kr.co.sboard.service;
 
 import kr.co.sboard.dto.ArticleDTO;
 import kr.co.sboard.dto.FileDTO;
+import kr.co.sboard.repository.FileRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -21,6 +23,9 @@ public class FileService {
 
     @Value("${spring.servlet.multipart.location}")
     private String uploadPath;
+
+    private final FileRepository fileRepository;
+    private final ModelMapper modelMapper;
 
     public List<FileDTO> upload(ArticleDTO articleDTO) {
 
@@ -70,7 +75,11 @@ public class FileService {
 
     public void getFile(){}
     public void getFileAll(){}
-    public void save(){}
+
+    public void save(FileDTO fileDTO){
+        kr.co.sboard.entity.File file = modelMapper.map(fileDTO, kr.co.sboard.entity.File.class);
+        fileRepository.save(file);
+    }
     public void modify(){}
     public void remove(){}
 

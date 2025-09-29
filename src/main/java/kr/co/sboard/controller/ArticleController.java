@@ -53,16 +53,23 @@ public class ArticleController {
         articleDTO.setReg_ip(regip);
         log.info("articleDTO = {}", articleDTO);
 
+
+
+
         // 파일 업로드
         List<FileDTO> fileDTOList = fileService.upload(articleDTO);
-
-        // 파일 저장
-        
 
         // 글 저장
         int fileCnt = fileDTOList.size();
         articleDTO.setFile_cnt(fileCnt);
-        articleService.save(articleDTO);
+        int ano = articleService.save(articleDTO);
+
+        // 파일 저장
+        for(FileDTO fileDTO : fileDTOList){
+
+            fileDTO.setAno(ano);
+            fileService.save(fileDTO);
+        }
 
         return "redirect:/article/list";
     }

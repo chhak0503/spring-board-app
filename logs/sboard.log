@@ -15778,3 +15778,570 @@ java.io.StreamCorruptedException: invalid type code: 00
 2025-09-29T16:29:16.787+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/sboard'
 2025-09-29T16:29:16.790+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Started SboardApplication in 0.806 seconds (process running for 25127.177)
 2025-09-29T16:29:16.791+09:00  INFO 15616 --- [sboard] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-29T16:29:20.428+09:00  INFO 15616 --- [sboard] [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sboard]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-29T16:29:20.428+09:00  INFO 15616 --- [sboard] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-29T16:29:20.429+09:00  INFO 15616 --- [sboard] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-09-29T16:30:16.526+09:00  WARN 15616 --- [sboard] [http-nio-8080-exec-4] org.apache.catalina.connector.Request    : Creating the temporary upload location [C:\Users\GGG\AppData\Local\Temp\tomcat.8080.1659915788606967197\work\Tomcat-4\localhost\sboard\upload] as it is required by the servlet [dispatcherServlet]
+2025-09-29T16:30:16.611+09:00  INFO 15616 --- [sboard] [http-nio-8080-exec-4] k.c.sboard.controller.ArticleController  : articleDTO = ArticleDTO(ano=0, cate=free, title=파일 첨부 테스트1, content=파일 업로드1, comment_cnt=0, file_cnt=0, hit_cnt=0, writer=chhak0503, reg_ip=0:0:0:0:0:0:0:1, wdate=null, file1=org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@28337128, file2=org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@5b44e4d5)
+2025-09-29T16:31:22.169+09:00  INFO 15616 --- [sboard] [http-nio-8080-exec-6] k.c.sboard.controller.ArticleController  : articleDTO = ArticleDTO(ano=0, cate=free, title=파일 첨부2, content=2개 첨부, comment_cnt=0, file_cnt=0, hit_cnt=0, writer=chhak0503, reg_ip=0:0:0:0:0:0:0:1, wdate=null, file1=org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@43b002f5, file2=org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@3306da7)
+2025-09-29T16:32:32.402+09:00  INFO 15616 --- [sboard] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2025-09-29T16:32:32.403+09:00  INFO 15616 --- [sboard] [Thread-999] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-29T16:32:32.533+09:00  INFO 15616 --- [sboard] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-29T16:32:32.535+09:00  INFO 15616 --- [sboard] [Thread-999] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:32:32.535+09:00  INFO 15616 --- [sboard] [Thread-999] com.zaxxer.hikari.HikariDataSource       : HikariPool-250 - Shutdown initiated...
+2025-09-29T16:32:32.632+09:00  INFO 15616 --- [sboard] [Thread-999] com.zaxxer.hikari.HikariDataSource       : HikariPool-250 - Shutdown completed.
+2025-09-29T16:32:32.747+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Starting SboardApplication v0.0.2-SNAPSHOT using Java 17.0.0.1 with PID 15616 (C:\Users\GGG\Desktop\Workspace\sboard\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\sboard)
+2025-09-29T16:32:32.748+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-09-29T16:32:32.938+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-29T16:32:32.949+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+2025-09-29T16:32:32.986+09:00  WARN 15616 --- [sboard] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.co.sboard]' package. Please check your configuration.
+2025-09-29T16:32:33.075+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-29T16:32:33.076+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-29T16:32:33.076+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-29T16:32:33.102+09:00  INFO 15616 --- [sboard] [restartedMain] o.a.c.c.C.[.[localhost].[/sboard]        : Initializing Spring embedded WebApplicationContext
+2025-09-29T16:32:33.102+09:00  INFO 15616 --- [sboard] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 353 ms
+2025-09-29T16:32:33.118+09:00  WARN 15616 --- [sboard] [restartedMain] o.a.c.c.C.[.[localhost].[/sboard]        : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [FC05D9F69B2139B0F4646E21FA6DE703]
+2025-09-29T16:32:33.149+09:00  INFO 15616 --- [sboard] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-29T16:32:33.159+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-29T16:32:33.172+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-29T16:32:33.173+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-251 - Starting...
+2025-09-29T16:32:33.174+09:00  WARN 15616 --- [sboard] [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-29T16:32:33.304+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-251 - Added connection oracle.jdbc.driver.T4CConnection@1fb4302d
+2025-09-29T16:32:33.304+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-251 - Start completed.
+2025-09-29T16:32:33.368+09:00  INFO 15616 --- [sboard] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-251)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-29T16:32:33.408+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-29T16:32:33.408+09:00  INFO 15616 --- [sboard] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:32:33.480+09:00  WARN 15616 --- [sboard] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29T16:32:33.487+09:00  INFO 15616 --- [sboard] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+2025-09-29T16:32:33.499+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-29T16:32:33.609+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-29T16:32:33.619+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/sboard'
+2025-09-29T16:32:33.622+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Started SboardApplication in 0.901 seconds (process running for 25324.009)
+2025-09-29T16:32:33.623+09:00  INFO 15616 --- [sboard] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-29T16:32:59.905+09:00  INFO 15616 --- [sboard] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (1 addition, 0 deletions, 2 modifications)
+2025-09-29T16:32:59.906+09:00  INFO 15616 --- [sboard] [Thread-1003] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-29T16:33:00.078+09:00  INFO 15616 --- [sboard] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-29T16:33:00.080+09:00  INFO 15616 --- [sboard] [Thread-1003] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:33:00.080+09:00  INFO 15616 --- [sboard] [Thread-1003] com.zaxxer.hikari.HikariDataSource       : HikariPool-251 - Shutdown initiated...
+2025-09-29T16:33:00.182+09:00  INFO 15616 --- [sboard] [Thread-1003] com.zaxxer.hikari.HikariDataSource       : HikariPool-251 - Shutdown completed.
+2025-09-29T16:33:00.317+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Starting SboardApplication v0.0.2-SNAPSHOT using Java 17.0.0.1 with PID 15616 (C:\Users\GGG\Desktop\Workspace\sboard\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\sboard)
+2025-09-29T16:33:00.317+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-09-29T16:33:00.528+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-29T16:33:00.543+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 3 JPA repository interfaces.
+2025-09-29T16:33:00.582+09:00  WARN 15616 --- [sboard] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.co.sboard]' package. Please check your configuration.
+2025-09-29T16:33:00.637+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-29T16:33:00.639+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-29T16:33:00.640+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-29T16:33:00.656+09:00  INFO 15616 --- [sboard] [restartedMain] o.a.c.c.C.[.[localhost].[/sboard]        : Initializing Spring embedded WebApplicationContext
+2025-09-29T16:33:00.656+09:00  INFO 15616 --- [sboard] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 337 ms
+2025-09-29T16:33:00.682+09:00  INFO 15616 --- [sboard] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-29T16:33:00.685+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-29T16:33:00.692+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-29T16:33:00.692+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-252 - Starting...
+2025-09-29T16:33:00.692+09:00  WARN 15616 --- [sboard] [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-29T16:33:00.825+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-252 - Added connection oracle.jdbc.driver.T4CConnection@6c302bb6
+2025-09-29T16:33:00.825+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-252 - Start completed.
+2025-09-29T16:33:00.894+09:00  INFO 15616 --- [sboard] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-252)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-29T16:33:00.939+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-29T16:33:00.939+09:00  INFO 15616 --- [sboard] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:33:01.003+09:00  WARN 15616 --- [sboard] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29T16:33:01.009+09:00  INFO 15616 --- [sboard] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+2025-09-29T16:33:01.016+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-29T16:33:01.113+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-29T16:33:01.131+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/sboard'
+2025-09-29T16:33:01.137+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Started SboardApplication in 0.856 seconds (process running for 25351.524)
+2025-09-29T16:33:01.139+09:00  INFO 15616 --- [sboard] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-29T16:33:14.747+09:00  INFO 15616 --- [sboard] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 3 deletions, 0 modifications)
+2025-09-29T16:33:14.748+09:00  INFO 15616 --- [sboard] [Thread-1007] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-29T16:33:14.876+09:00  INFO 15616 --- [sboard] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-29T16:33:14.878+09:00  INFO 15616 --- [sboard] [Thread-1007] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:33:14.878+09:00  INFO 15616 --- [sboard] [Thread-1007] com.zaxxer.hikari.HikariDataSource       : HikariPool-252 - Shutdown initiated...
+2025-09-29T16:33:14.980+09:00  INFO 15616 --- [sboard] [Thread-1007] com.zaxxer.hikari.HikariDataSource       : HikariPool-252 - Shutdown completed.
+2025-09-29T16:33:15.218+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Starting SboardApplication v0.0.2-SNAPSHOT using Java 17.0.0.1 with PID 15616 (C:\Users\GGG\Desktop\Workspace\sboard\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\sboard)
+2025-09-29T16:33:15.219+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-09-29T16:33:15.570+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-29T16:33:15.592+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+2025-09-29T16:33:15.648+09:00  WARN 15616 --- [sboard] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.co.sboard]' package. Please check your configuration.
+2025-09-29T16:33:15.753+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-29T16:33:15.754+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-29T16:33:15.754+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-29T16:33:15.781+09:00  INFO 15616 --- [sboard] [restartedMain] o.a.c.c.C.[.[localhost].[/sboard]        : Initializing Spring embedded WebApplicationContext
+2025-09-29T16:33:15.781+09:00  INFO 15616 --- [sboard] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 560 ms
+2025-09-29T16:33:15.823+09:00  INFO 15616 --- [sboard] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-29T16:33:15.832+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-29T16:33:15.841+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-29T16:33:15.842+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-253 - Starting...
+2025-09-29T16:33:15.842+09:00  WARN 15616 --- [sboard] [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-29T16:33:15.983+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-253 - Added connection oracle.jdbc.driver.T4CConnection@11aa0862
+2025-09-29T16:33:15.983+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-253 - Start completed.
+2025-09-29T16:33:16.050+09:00  INFO 15616 --- [sboard] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-253)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-29T16:33:16.093+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-29T16:33:16.093+09:00  INFO 15616 --- [sboard] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:33:16.160+09:00  WARN 15616 --- [sboard] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29T16:33:16.167+09:00  INFO 15616 --- [sboard] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+2025-09-29T16:33:16.180+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-29T16:33:16.289+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-29T16:33:16.298+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/sboard'
+2025-09-29T16:33:16.302+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Started SboardApplication in 1.148 seconds (process running for 25366.69)
+2025-09-29T16:33:16.303+09:00  INFO 15616 --- [sboard] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-29T16:33:47.187+09:00  INFO 15616 --- [sboard] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-09-29T16:33:47.188+09:00  INFO 15616 --- [sboard] [Thread-1011] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-29T16:33:47.327+09:00  INFO 15616 --- [sboard] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-29T16:33:47.328+09:00  INFO 15616 --- [sboard] [Thread-1011] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:33:47.329+09:00  INFO 15616 --- [sboard] [Thread-1011] com.zaxxer.hikari.HikariDataSource       : HikariPool-253 - Shutdown initiated...
+2025-09-29T16:33:47.429+09:00  INFO 15616 --- [sboard] [Thread-1011] com.zaxxer.hikari.HikariDataSource       : HikariPool-253 - Shutdown completed.
+2025-09-29T16:33:47.556+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Starting SboardApplication v0.0.2-SNAPSHOT using Java 17.0.0.1 with PID 15616 (C:\Users\GGG\Desktop\Workspace\sboard\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\sboard)
+2025-09-29T16:33:47.557+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-09-29T16:33:47.760+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-29T16:33:47.773+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 4 JPA repository interfaces.
+2025-09-29T16:33:47.821+09:00  WARN 15616 --- [sboard] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.co.sboard]' package. Please check your configuration.
+2025-09-29T16:33:47.899+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-29T16:33:47.900+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-29T16:33:47.900+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-29T16:33:47.920+09:00  INFO 15616 --- [sboard] [restartedMain] o.a.c.c.C.[.[localhost].[/sboard]        : Initializing Spring embedded WebApplicationContext
+2025-09-29T16:33:47.920+09:00  INFO 15616 --- [sboard] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 362 ms
+2025-09-29T16:33:47.949+09:00  INFO 15616 --- [sboard] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-29T16:33:47.953+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-29T16:33:47.960+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-29T16:33:47.961+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-254 - Starting...
+2025-09-29T16:33:47.961+09:00  WARN 15616 --- [sboard] [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-29T16:33:48.091+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-254 - Added connection oracle.jdbc.driver.T4CConnection@4294fd70
+2025-09-29T16:33:48.091+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-254 - Start completed.
+2025-09-29T16:33:48.164+09:00  INFO 15616 --- [sboard] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-254)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-29T16:33:48.242+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-29T16:33:48.243+09:00  INFO 15616 --- [sboard] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:33:48.353+09:00  WARN 15616 --- [sboard] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29T16:33:48.364+09:00  INFO 15616 --- [sboard] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+2025-09-29T16:33:48.373+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-29T16:33:48.489+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-29T16:33:48.513+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/sboard'
+2025-09-29T16:33:48.519+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Started SboardApplication in 0.994 seconds (process running for 25398.906)
+2025-09-29T16:33:48.520+09:00  INFO 15616 --- [sboard] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-29T16:34:25.600+09:00  INFO 15616 --- [sboard] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2025-09-29T16:34:25.606+09:00  INFO 15616 --- [sboard] [Thread-1015] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-29T16:34:25.761+09:00  INFO 15616 --- [sboard] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-29T16:34:25.763+09:00  INFO 15616 --- [sboard] [Thread-1015] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:34:25.763+09:00  INFO 15616 --- [sboard] [Thread-1015] com.zaxxer.hikari.HikariDataSource       : HikariPool-254 - Shutdown initiated...
+2025-09-29T16:34:25.863+09:00  INFO 15616 --- [sboard] [Thread-1015] com.zaxxer.hikari.HikariDataSource       : HikariPool-254 - Shutdown completed.
+2025-09-29T16:34:26.016+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Starting SboardApplication v0.0.2-SNAPSHOT using Java 17.0.0.1 with PID 15616 (C:\Users\GGG\Desktop\Workspace\sboard\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\sboard)
+2025-09-29T16:34:26.016+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-09-29T16:34:26.254+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-29T16:34:26.266+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 4 JPA repository interfaces.
+2025-09-29T16:34:26.304+09:00  WARN 15616 --- [sboard] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.co.sboard]' package. Please check your configuration.
+2025-09-29T16:34:26.363+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-29T16:34:26.363+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-29T16:34:26.363+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-29T16:34:26.378+09:00  INFO 15616 --- [sboard] [restartedMain] o.a.c.c.C.[.[localhost].[/sboard]        : Initializing Spring embedded WebApplicationContext
+2025-09-29T16:34:26.379+09:00  INFO 15616 --- [sboard] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 361 ms
+2025-09-29T16:34:26.400+09:00  INFO 15616 --- [sboard] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-29T16:34:26.403+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-29T16:34:26.410+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-29T16:34:26.411+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-255 - Starting...
+2025-09-29T16:34:26.411+09:00  WARN 15616 --- [sboard] [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-29T16:34:26.537+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-255 - Added connection oracle.jdbc.driver.T4CConnection@73f11afb
+2025-09-29T16:34:26.537+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-255 - Start completed.
+2025-09-29T16:34:26.608+09:00  INFO 15616 --- [sboard] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-255)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-29T16:34:26.653+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-29T16:34:26.653+09:00  INFO 15616 --- [sboard] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:34:26.735+09:00  WARN 15616 --- [sboard] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29T16:34:26.740+09:00  INFO 15616 --- [sboard] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+2025-09-29T16:34:26.747+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-29T16:34:26.841+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-29T16:34:26.850+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/sboard'
+2025-09-29T16:34:26.853+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Started SboardApplication in 0.886 seconds (process running for 25437.241)
+2025-09-29T16:34:26.854+09:00  INFO 15616 --- [sboard] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-29T16:35:21.164+09:00  INFO 15616 --- [sboard] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2025-09-29T16:35:21.165+09:00  INFO 15616 --- [sboard] [Thread-1019] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-29T16:35:21.315+09:00  INFO 15616 --- [sboard] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-29T16:35:21.317+09:00  INFO 15616 --- [sboard] [Thread-1019] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:35:21.318+09:00  INFO 15616 --- [sboard] [Thread-1019] com.zaxxer.hikari.HikariDataSource       : HikariPool-255 - Shutdown initiated...
+2025-09-29T16:35:21.420+09:00  INFO 15616 --- [sboard] [Thread-1019] com.zaxxer.hikari.HikariDataSource       : HikariPool-255 - Shutdown completed.
+2025-09-29T16:35:21.610+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Starting SboardApplication v0.0.2-SNAPSHOT using Java 17.0.0.1 with PID 15616 (C:\Users\GGG\Desktop\Workspace\sboard\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\sboard)
+2025-09-29T16:35:21.611+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-09-29T16:35:21.850+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-29T16:35:21.871+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+2025-09-29T16:35:21.936+09:00  WARN 15616 --- [sboard] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.co.sboard]' package. Please check your configuration.
+2025-09-29T16:35:22.057+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-29T16:35:22.057+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-29T16:35:22.058+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-29T16:35:22.074+09:00  INFO 15616 --- [sboard] [restartedMain] o.a.c.c.C.[.[localhost].[/sboard]        : Initializing Spring embedded WebApplicationContext
+2025-09-29T16:35:22.074+09:00  INFO 15616 --- [sboard] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 461 ms
+2025-09-29T16:35:22.109+09:00  INFO 15616 --- [sboard] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-29T16:35:22.118+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-29T16:35:22.126+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-29T16:35:22.127+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-256 - Starting...
+2025-09-29T16:35:22.127+09:00  WARN 15616 --- [sboard] [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-29T16:35:22.268+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-256 - Added connection oracle.jdbc.driver.T4CConnection@105a6706
+2025-09-29T16:35:22.268+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-256 - Start completed.
+2025-09-29T16:35:22.341+09:00  INFO 15616 --- [sboard] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-256)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-29T16:35:22.413+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-29T16:35:22.413+09:00  INFO 15616 --- [sboard] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:35:22.567+09:00  WARN 15616 --- [sboard] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29T16:35:22.580+09:00  INFO 15616 --- [sboard] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+2025-09-29T16:35:22.587+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-29T16:35:22.687+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-29T16:35:22.695+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/sboard'
+2025-09-29T16:35:22.698+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Started SboardApplication in 1.125 seconds (process running for 25493.085)
+2025-09-29T16:35:22.699+09:00  INFO 15616 --- [sboard] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-29T16:35:56.677+09:00  INFO 15616 --- [sboard] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2025-09-29T16:35:56.678+09:00  INFO 15616 --- [sboard] [Thread-1023] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-29T16:35:56.845+09:00  INFO 15616 --- [sboard] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-29T16:35:56.847+09:00  INFO 15616 --- [sboard] [Thread-1023] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:35:56.847+09:00  INFO 15616 --- [sboard] [Thread-1023] com.zaxxer.hikari.HikariDataSource       : HikariPool-256 - Shutdown initiated...
+2025-09-29T16:35:56.947+09:00  INFO 15616 --- [sboard] [Thread-1023] com.zaxxer.hikari.HikariDataSource       : HikariPool-256 - Shutdown completed.
+2025-09-29T16:35:57.073+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Starting SboardApplication v0.0.2-SNAPSHOT using Java 17.0.0.1 with PID 15616 (C:\Users\GGG\Desktop\Workspace\sboard\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\sboard)
+2025-09-29T16:35:57.074+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-09-29T16:35:57.324+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-29T16:35:57.344+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+2025-09-29T16:35:57.411+09:00  WARN 15616 --- [sboard] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.co.sboard]' package. Please check your configuration.
+2025-09-29T16:35:57.498+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-29T16:35:57.498+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-29T16:35:57.498+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-29T16:35:57.533+09:00  INFO 15616 --- [sboard] [restartedMain] o.a.c.c.C.[.[localhost].[/sboard]        : Initializing Spring embedded WebApplicationContext
+2025-09-29T16:35:57.534+09:00  INFO 15616 --- [sboard] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 459 ms
+2025-09-29T16:35:57.621+09:00  INFO 15616 --- [sboard] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-29T16:35:57.629+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-29T16:35:57.639+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-29T16:35:57.640+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-257 - Starting...
+2025-09-29T16:35:57.640+09:00  WARN 15616 --- [sboard] [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-29T16:35:57.779+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-257 - Added connection oracle.jdbc.driver.T4CConnection@6f81b1e5
+2025-09-29T16:35:57.779+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-257 - Start completed.
+2025-09-29T16:35:57.852+09:00  INFO 15616 --- [sboard] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-257)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-29T16:35:57.913+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-29T16:35:57.913+09:00  INFO 15616 --- [sboard] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:35:58.003+09:00  WARN 15616 --- [sboard] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29T16:35:58.016+09:00  INFO 15616 --- [sboard] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+2025-09-29T16:35:58.023+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-29T16:35:58.126+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-29T16:35:58.140+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/sboard'
+2025-09-29T16:35:58.143+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Started SboardApplication in 1.099 seconds (process running for 25528.53)
+2025-09-29T16:35:58.144+09:00  INFO 15616 --- [sboard] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-29T16:36:41.458+09:00  INFO 15616 --- [sboard] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-29T16:36:41.459+09:00  INFO 15616 --- [sboard] [Thread-1027] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-29T16:36:41.595+09:00  INFO 15616 --- [sboard] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-29T16:36:41.597+09:00  INFO 15616 --- [sboard] [Thread-1027] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:36:41.598+09:00  INFO 15616 --- [sboard] [Thread-1027] com.zaxxer.hikari.HikariDataSource       : HikariPool-257 - Shutdown initiated...
+2025-09-29T16:36:41.697+09:00  INFO 15616 --- [sboard] [Thread-1027] com.zaxxer.hikari.HikariDataSource       : HikariPool-257 - Shutdown completed.
+2025-09-29T16:36:41.823+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Starting SboardApplication v0.0.2-SNAPSHOT using Java 17.0.0.1 with PID 15616 (C:\Users\GGG\Desktop\Workspace\sboard\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\sboard)
+2025-09-29T16:36:41.824+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-09-29T16:36:42.035+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-29T16:36:42.052+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2025-09-29T16:36:42.096+09:00  WARN 15616 --- [sboard] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.co.sboard]' package. Please check your configuration.
+2025-09-29T16:36:42.166+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-29T16:36:42.167+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-29T16:36:42.167+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-29T16:36:42.189+09:00  INFO 15616 --- [sboard] [restartedMain] o.a.c.c.C.[.[localhost].[/sboard]        : Initializing Spring embedded WebApplicationContext
+2025-09-29T16:36:42.189+09:00  INFO 15616 --- [sboard] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 364 ms
+2025-09-29T16:36:42.220+09:00  INFO 15616 --- [sboard] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-29T16:36:42.225+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-29T16:36:42.233+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-29T16:36:42.234+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-258 - Starting...
+2025-09-29T16:36:42.234+09:00  WARN 15616 --- [sboard] [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-29T16:36:42.362+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-258 - Added connection oracle.jdbc.driver.T4CConnection@3669464
+2025-09-29T16:36:42.362+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-258 - Start completed.
+2025-09-29T16:36:42.431+09:00  INFO 15616 --- [sboard] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-258)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-29T16:36:42.470+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-29T16:36:42.470+09:00  INFO 15616 --- [sboard] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:36:42.526+09:00  WARN 15616 --- [sboard] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29T16:36:42.532+09:00  INFO 15616 --- [sboard] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+2025-09-29T16:36:42.538+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-29T16:36:42.617+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-29T16:36:42.625+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/sboard'
+2025-09-29T16:36:42.628+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Started SboardApplication in 0.838 seconds (process running for 25573.016)
+2025-09-29T16:36:42.629+09:00  INFO 15616 --- [sboard] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-29T16:37:28.562+09:00  INFO 15616 --- [sboard] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-09-29T16:37:28.563+09:00  INFO 15616 --- [sboard] [Thread-1031] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-29T16:37:28.688+09:00  INFO 15616 --- [sboard] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-29T16:37:28.689+09:00  INFO 15616 --- [sboard] [Thread-1031] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:37:28.690+09:00  INFO 15616 --- [sboard] [Thread-1031] com.zaxxer.hikari.HikariDataSource       : HikariPool-258 - Shutdown initiated...
+2025-09-29T16:37:28.789+09:00  INFO 15616 --- [sboard] [Thread-1031] com.zaxxer.hikari.HikariDataSource       : HikariPool-258 - Shutdown completed.
+2025-09-29T16:37:28.902+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Starting SboardApplication v0.0.2-SNAPSHOT using Java 17.0.0.1 with PID 15616 (C:\Users\GGG\Desktop\Workspace\sboard\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\sboard)
+2025-09-29T16:37:28.902+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-09-29T16:37:29.166+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-29T16:37:29.192+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 4 JPA repository interfaces.
+2025-09-29T16:37:29.256+09:00  WARN 15616 --- [sboard] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.co.sboard]' package. Please check your configuration.
+2025-09-29T16:37:29.330+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-29T16:37:29.330+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-29T16:37:29.330+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-29T16:37:29.350+09:00  INFO 15616 --- [sboard] [restartedMain] o.a.c.c.C.[.[localhost].[/sboard]        : Initializing Spring embedded WebApplicationContext
+2025-09-29T16:37:29.350+09:00  INFO 15616 --- [sboard] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 447 ms
+2025-09-29T16:37:29.374+09:00  INFO 15616 --- [sboard] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-29T16:37:29.382+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-29T16:37:29.389+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-29T16:37:29.390+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-259 - Starting...
+2025-09-29T16:37:29.390+09:00  WARN 15616 --- [sboard] [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-29T16:37:29.528+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-259 - Added connection oracle.jdbc.driver.T4CConnection@4bbaeacd
+2025-09-29T16:37:29.528+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-259 - Start completed.
+2025-09-29T16:37:29.601+09:00  INFO 15616 --- [sboard] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-259)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-29T16:37:29.652+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-29T16:37:29.653+09:00  INFO 15616 --- [sboard] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:37:29.747+09:00  WARN 15616 --- [sboard] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29T16:37:29.755+09:00  INFO 15616 --- [sboard] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+2025-09-29T16:37:29.772+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-29T16:37:30.016+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-29T16:37:30.032+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/sboard'
+2025-09-29T16:37:30.041+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Started SboardApplication in 1.164 seconds (process running for 25620.428)
+2025-09-29T16:37:30.042+09:00  INFO 15616 --- [sboard] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-29T16:38:21.236+09:00  INFO 15616 --- [sboard] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2025-09-29T16:38:21.237+09:00  INFO 15616 --- [sboard] [Thread-1035] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-29T16:38:21.362+09:00  INFO 15616 --- [sboard] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-29T16:38:21.363+09:00  INFO 15616 --- [sboard] [Thread-1035] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:38:21.364+09:00  INFO 15616 --- [sboard] [Thread-1035] com.zaxxer.hikari.HikariDataSource       : HikariPool-259 - Shutdown initiated...
+2025-09-29T16:38:21.465+09:00  INFO 15616 --- [sboard] [Thread-1035] com.zaxxer.hikari.HikariDataSource       : HikariPool-259 - Shutdown completed.
+2025-09-29T16:38:21.551+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Starting SboardApplication v0.0.2-SNAPSHOT using Java 17.0.0.1 with PID 15616 (C:\Users\GGG\Desktop\Workspace\sboard\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\sboard)
+2025-09-29T16:38:21.551+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-09-29T16:38:21.712+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-29T16:38:21.723+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 4 JPA repository interfaces.
+2025-09-29T16:38:21.755+09:00  WARN 15616 --- [sboard] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.co.sboard]' package. Please check your configuration.
+2025-09-29T16:38:21.823+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-29T16:38:21.823+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-29T16:38:21.824+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-29T16:38:21.844+09:00  INFO 15616 --- [sboard] [restartedMain] o.a.c.c.C.[.[localhost].[/sboard]        : Initializing Spring embedded WebApplicationContext
+2025-09-29T16:38:21.844+09:00  INFO 15616 --- [sboard] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 292 ms
+2025-09-29T16:38:21.871+09:00  INFO 15616 --- [sboard] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-29T16:38:21.875+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-29T16:38:21.883+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-29T16:38:21.884+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-260 - Starting...
+2025-09-29T16:38:21.884+09:00  WARN 15616 --- [sboard] [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-29T16:38:22.014+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-260 - Added connection oracle.jdbc.driver.T4CConnection@60f7b49e
+2025-09-29T16:38:22.014+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-260 - Start completed.
+2025-09-29T16:38:22.086+09:00  INFO 15616 --- [sboard] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-260)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-29T16:38:22.142+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-29T16:38:22.142+09:00  INFO 15616 --- [sboard] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:38:22.216+09:00  WARN 15616 --- [sboard] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29T16:38:22.223+09:00  INFO 15616 --- [sboard] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+2025-09-29T16:38:22.230+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-29T16:38:22.325+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-29T16:38:22.334+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/sboard'
+2025-09-29T16:38:22.337+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Started SboardApplication in 0.807 seconds (process running for 25672.724)
+2025-09-29T16:38:22.338+09:00  INFO 15616 --- [sboard] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-29T16:38:42.026+09:00  INFO 15616 --- [sboard] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2025-09-29T16:38:42.027+09:00  INFO 15616 --- [sboard] [Thread-1039] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-29T16:38:42.177+09:00  INFO 15616 --- [sboard] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-29T16:38:42.184+09:00  INFO 15616 --- [sboard] [Thread-1039] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:38:42.184+09:00  INFO 15616 --- [sboard] [Thread-1039] com.zaxxer.hikari.HikariDataSource       : HikariPool-260 - Shutdown initiated...
+2025-09-29T16:38:42.285+09:00  INFO 15616 --- [sboard] [Thread-1039] com.zaxxer.hikari.HikariDataSource       : HikariPool-260 - Shutdown completed.
+2025-09-29T16:38:42.403+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Starting SboardApplication v0.0.2-SNAPSHOT using Java 17.0.0.1 with PID 15616 (C:\Users\GGG\Desktop\Workspace\sboard\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\sboard)
+2025-09-29T16:38:42.404+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-09-29T16:38:42.952+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-29T16:38:42.974+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 4 JPA repository interfaces.
+2025-09-29T16:38:43.046+09:00  WARN 15616 --- [sboard] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.co.sboard]' package. Please check your configuration.
+2025-09-29T16:38:43.159+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-29T16:38:43.159+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-29T16:38:43.159+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-29T16:38:43.181+09:00  INFO 15616 --- [sboard] [restartedMain] o.a.c.c.C.[.[localhost].[/sboard]        : Initializing Spring embedded WebApplicationContext
+2025-09-29T16:38:43.181+09:00  INFO 15616 --- [sboard] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 776 ms
+2025-09-29T16:38:43.211+09:00  INFO 15616 --- [sboard] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-29T16:38:43.215+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-29T16:38:43.222+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-29T16:38:43.223+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-261 - Starting...
+2025-09-29T16:38:43.223+09:00  WARN 15616 --- [sboard] [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-29T16:38:43.341+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-261 - Added connection oracle.jdbc.driver.T4CConnection@3ace0151
+2025-09-29T16:38:43.341+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-261 - Start completed.
+2025-09-29T16:38:43.406+09:00  INFO 15616 --- [sboard] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-261)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-29T16:38:43.471+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-29T16:38:43.472+09:00  INFO 15616 --- [sboard] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:38:43.582+09:00  WARN 15616 --- [sboard] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29T16:38:43.593+09:00  INFO 15616 --- [sboard] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+2025-09-29T16:38:43.600+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-29T16:38:43.699+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-29T16:38:43.708+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/sboard'
+2025-09-29T16:38:43.711+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Started SboardApplication in 1.343 seconds (process running for 25694.098)
+2025-09-29T16:38:43.712+09:00  INFO 15616 --- [sboard] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-29T16:39:04.482+09:00  INFO 15616 --- [sboard] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-09-29T16:39:04.484+09:00  INFO 15616 --- [sboard] [Thread-1043] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-29T16:39:04.643+09:00  INFO 15616 --- [sboard] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-29T16:39:04.644+09:00  INFO 15616 --- [sboard] [Thread-1043] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:39:04.644+09:00  INFO 15616 --- [sboard] [Thread-1043] com.zaxxer.hikari.HikariDataSource       : HikariPool-261 - Shutdown initiated...
+2025-09-29T16:39:04.741+09:00  INFO 15616 --- [sboard] [Thread-1043] com.zaxxer.hikari.HikariDataSource       : HikariPool-261 - Shutdown completed.
+2025-09-29T16:39:04.837+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Starting SboardApplication v0.0.2-SNAPSHOT using Java 17.0.0.1 with PID 15616 (C:\Users\GGG\Desktop\Workspace\sboard\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\sboard)
+2025-09-29T16:39:04.837+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-09-29T16:39:05.175+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-29T16:39:05.187+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 4 JPA repository interfaces.
+2025-09-29T16:39:05.236+09:00  WARN 15616 --- [sboard] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.co.sboard]' package. Please check your configuration.
+2025-09-29T16:39:05.313+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-29T16:39:05.314+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-29T16:39:05.314+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-29T16:39:05.329+09:00  INFO 15616 --- [sboard] [restartedMain] o.a.c.c.C.[.[localhost].[/sboard]        : Initializing Spring embedded WebApplicationContext
+2025-09-29T16:39:05.329+09:00  INFO 15616 --- [sboard] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 491 ms
+2025-09-29T16:39:05.360+09:00  INFO 15616 --- [sboard] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-29T16:39:05.363+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-29T16:39:05.376+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-29T16:39:05.377+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-262 - Starting...
+2025-09-29T16:39:05.377+09:00  WARN 15616 --- [sboard] [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-29T16:39:05.505+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-262 - Added connection oracle.jdbc.driver.T4CConnection@609fdeda
+2025-09-29T16:39:05.505+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-262 - Start completed.
+2025-09-29T16:39:05.578+09:00  INFO 15616 --- [sboard] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-262)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-29T16:39:05.628+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-29T16:39:05.628+09:00  INFO 15616 --- [sboard] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:39:05.697+09:00  WARN 15616 --- [sboard] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29T16:39:05.702+09:00  INFO 15616 --- [sboard] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+2025-09-29T16:39:05.709+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-29T16:39:05.842+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-29T16:39:05.859+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/sboard'
+2025-09-29T16:39:05.863+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Started SboardApplication in 1.05 seconds (process running for 25716.25)
+2025-09-29T16:39:05.864+09:00  INFO 15616 --- [sboard] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-29T16:39:17.925+09:00  INFO 15616 --- [sboard] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-09-29T16:39:17.926+09:00  INFO 15616 --- [sboard] [Thread-1047] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-29T16:39:18.074+09:00  INFO 15616 --- [sboard] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-29T16:39:18.076+09:00  INFO 15616 --- [sboard] [Thread-1047] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:39:18.076+09:00  INFO 15616 --- [sboard] [Thread-1047] com.zaxxer.hikari.HikariDataSource       : HikariPool-262 - Shutdown initiated...
+2025-09-29T16:39:18.178+09:00  INFO 15616 --- [sboard] [Thread-1047] com.zaxxer.hikari.HikariDataSource       : HikariPool-262 - Shutdown completed.
+2025-09-29T16:39:18.318+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Starting SboardApplication v0.0.2-SNAPSHOT using Java 17.0.0.1 with PID 15616 (C:\Users\GGG\Desktop\Workspace\sboard\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\sboard)
+2025-09-29T16:39:18.318+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-09-29T16:39:18.552+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-29T16:39:18.568+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2025-09-29T16:39:18.607+09:00  WARN 15616 --- [sboard] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.co.sboard]' package. Please check your configuration.
+2025-09-29T16:39:18.664+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-29T16:39:18.665+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-29T16:39:18.665+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-29T16:39:18.680+09:00  INFO 15616 --- [sboard] [restartedMain] o.a.c.c.C.[.[localhost].[/sboard]        : Initializing Spring embedded WebApplicationContext
+2025-09-29T16:39:18.680+09:00  INFO 15616 --- [sboard] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 361 ms
+2025-09-29T16:39:18.701+09:00  INFO 15616 --- [sboard] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-29T16:39:18.704+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-29T16:39:18.711+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-29T16:39:18.712+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-263 - Starting...
+2025-09-29T16:39:18.712+09:00  WARN 15616 --- [sboard] [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-29T16:39:18.856+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-263 - Added connection oracle.jdbc.driver.T4CConnection@71e0fc96
+2025-09-29T16:39:18.856+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-263 - Start completed.
+2025-09-29T16:39:18.937+09:00  INFO 15616 --- [sboard] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-263)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-29T16:39:18.978+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-29T16:39:18.979+09:00  INFO 15616 --- [sboard] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:39:19.063+09:00  WARN 15616 --- [sboard] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29T16:39:19.070+09:00  INFO 15616 --- [sboard] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+2025-09-29T16:39:19.078+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-29T16:39:19.195+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-29T16:39:19.204+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/sboard'
+2025-09-29T16:39:19.207+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Started SboardApplication in 0.927 seconds (process running for 25729.594)
+2025-09-29T16:39:19.207+09:00  INFO 15616 --- [sboard] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-09-29T16:39:26.747+09:00  INFO 15616 --- [sboard] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-09-29T16:39:26.748+09:00  INFO 15616 --- [sboard] [Thread-1051] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-29T16:39:26.912+09:00  INFO 15616 --- [sboard] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-29T16:39:26.914+09:00  INFO 15616 --- [sboard] [Thread-1051] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:39:26.914+09:00  INFO 15616 --- [sboard] [Thread-1051] com.zaxxer.hikari.HikariDataSource       : HikariPool-263 - Shutdown initiated...
+2025-09-29T16:39:27.014+09:00  INFO 15616 --- [sboard] [Thread-1051] com.zaxxer.hikari.HikariDataSource       : HikariPool-263 - Shutdown completed.
+2025-09-29T16:39:27.113+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Starting SboardApplication v0.0.2-SNAPSHOT using Java 17.0.0.1 with PID 15616 (C:\Users\GGG\Desktop\Workspace\sboard\build\classes\java\main started by GGG in C:\Users\GGG\Desktop\Workspace\sboard)
+2025-09-29T16:39:27.114+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-09-29T16:39:27.335+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-29T16:39:27.350+09:00  INFO 15616 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+2025-09-29T16:39:27.468+09:00  WARN 15616 --- [sboard] [restartedMain] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[kr.co.sboard]' package. Please check your configuration.
+2025-09-29T16:39:27.555+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-29T16:39:27.556+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-29T16:39:27.556+09:00  INFO 15616 --- [sboard] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-09-29T16:39:27.580+09:00  INFO 15616 --- [sboard] [restartedMain] o.a.c.c.C.[.[localhost].[/sboard]        : Initializing Spring embedded WebApplicationContext
+2025-09-29T16:39:27.580+09:00  INFO 15616 --- [sboard] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 465 ms
+2025-09-29T16:39:27.617+09:00  INFO 15616 --- [sboard] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-29T16:39:27.621+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-29T16:39:27.629+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-29T16:39:27.631+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-264 - Starting...
+2025-09-29T16:39:27.631+09:00  WARN 15616 --- [sboard] [restartedMain] c.zaxxer.hikari.util.DriverDataSource    : Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+2025-09-29T16:39:27.765+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-264 - Added connection oracle.jdbc.driver.T4CConnection@7196442
+2025-09-29T16:39:27.766+09:00  INFO 15616 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-264 - Start completed.
+2025-09-29T16:39:27.848+09:00  INFO 15616 --- [sboard] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-264)']
+	Database driver: undefined/unknown
+	Database version: 21.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-29T16:39:27.901+09:00  INFO 15616 --- [sboard] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-29T16:39:27.902+09:00  INFO 15616 --- [sboard] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T16:39:28.047+09:00  WARN 15616 --- [sboard] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-29T16:39:28.054+09:00  INFO 15616 --- [sboard] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+2025-09-29T16:39:28.062+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-09-29T16:39:28.356+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-09-29T16:39:28.367+09:00  INFO 15616 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/sboard'
+2025-09-29T16:39:28.372+09:00  INFO 15616 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Started SboardApplication in 1.281 seconds (process running for 25738.76)
+2025-09-29T16:39:28.373+09:00  INFO 15616 --- [sboard] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

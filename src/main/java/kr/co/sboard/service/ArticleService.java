@@ -36,12 +36,12 @@ public class ArticleService {
                 .toList();
     }
 
-    public void save(ArticleDTO articleDTO){
+    public int save(ArticleDTO articleDTO){
 
         Article article = modelMapper.map(articleDTO, Article.class);
-        articleRepository.save(article);
+        Article savedArticle = articleRepository.save(article);
 
-        // 파일 업로드
+        return savedArticle.getAno();
 
     }
 
