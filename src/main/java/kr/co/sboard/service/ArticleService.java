@@ -1,11 +1,15 @@
 package kr.co.sboard.service;
 
+import com.querydsl.core.Tuple;
 import kr.co.sboard.dto.ArticleDTO;
+import kr.co.sboard.dto.PageRequestDTO;
 import kr.co.sboard.entity.Article;
 import kr.co.sboard.repository.ArticleRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,10 +32,15 @@ public class ArticleService {
         }
         return null;
     }
-    public List<ArticleDTO> getArticleAll(){
+    public List<ArticleDTO> getArticleAll(PageRequestDTO pageRequestDTO){
 
-        List<Article> list = articleRepository.findAll();
-        return list.stream()
+        //List<Article> list = articleRepository.findAll();
+
+        Pageable pageable = pageRequestDTO.getPageable("ano");
+
+        Page<Tuple> pageTuple = articleRepository.selectArticleAllForList(pageRequestDTO, pageable);
+
+        return pageTuple.getContent().stream()
                 .map(entity -> modelMapper.map(entity, ArticleDTO.class))
                 .toList();
     }

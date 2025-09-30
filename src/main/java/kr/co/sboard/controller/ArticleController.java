@@ -25,9 +25,9 @@ public class ArticleController {
     @GetMapping("/article/list")
     public String list(Model model){
 
-        List<ArticleDTO> dtoList = articleService.getArticleAll();
+        //List<ArticleDTO> dtoList = articleService.getArticleAll();
 
-        model.addAttribute("dtoList", dtoList);
+        //model.addAttribute("dtoList", dtoList);
 
         return "article/list";
     }
