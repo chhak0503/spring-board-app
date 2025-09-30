@@ -23,6 +23,10 @@ public class PageResponseDTO {
     private int start, end;
     private boolean prev, next;
 
+    private String searchType;
+    private String keyword;
+
+
     @Builder
     public PageResponseDTO(PageRequestDTO pageRequestDTO, List<ArticleDTO> dtoList, int total){
 
@@ -40,5 +44,9 @@ public class PageResponseDTO {
         this.end = Math.min(end, last);
         this.prev = this.start > 1;
         this.next = total > this.end * this.size;
+
+        this.searchType = pageRequestDTO.getSearchType();
+        this.keyword = pageRequestDTO.getKeyword();
+
     }
 }

@@ -12,5 +12,6 @@ public interface ArticleRepositoryCustom {
      *  ArticleRepositoryCustomImpl 로 하면 QueryDSL 생성 에러가 발생됨 🚯🚯❌❌❌❌❌❌❌❌❗❗❗❗❗❗❗❗
      */
     public Page<Tuple> selectArticleAllForList(PageRequestDTO pageRequestDTO, Pageable pageable);
+    public Page<Tuple> selectArticleAllForSearch(PageRequestDTO pageRequestDTO, Pageable pageable);
 
 }
