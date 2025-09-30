@@ -3,6 +3,7 @@ package kr.co.sboard.service;
 import com.querydsl.core.Tuple;
 import kr.co.sboard.dto.ArticleDTO;
 import kr.co.sboard.dto.PageRequestDTO;
+import kr.co.sboard.dto.PageResponseDTO;
 import kr.co.sboard.entity.Article;
 import kr.co.sboard.repository.ArticleRepository;
 import lombok.RequiredArgsConstructor;
@@ -32,7 +33,7 @@ public class ArticleService {
         }
         return null;
     }
-    public List<ArticleDTO> getArticleAll(PageRequestDTO pageRequestDTO){
+    public PageResponseDTO getArticleAll(PageRequestDTO pageRequestDTO){
 
         //List<Article> list = articleRepository.findAll();
 
@@ -40,9 +41,24 @@ public class ArticleService {
 
         Page<Tuple> pageTuple = articleRepository.selectArticleAllForList(pageRequestDTO, pageable);
 
-        return pageTuple.getContent().stream()
-                .map(entity -> modelMapper.map(entity, ArticleDTO.class))
-                .toList();
+        List<Tuple> tupleList = pageTuple.getContent();
+        int total = (int) pageTuple.getTotalElements();
+
+        List<ArticleDTO> dtoList = tupleList.stream()
+                                        .map(tuple -> {
+                                            Article article = tuple.get(0, Article.class);
+                                            String nick = tuple.get(1, String.class);
+                                            article.setNick(nick);
+                                            return modelMapper.map(article, ArticleDTO.class);
+                                        })
+                                        .toList();
+
+
+        return PageResponseDTO.builder()
+                .pageRequestDTO(pageRequestDTO)
+                .dtoList(dtoList)
+                .total(total)
+                .build();
     }
 
     public int save(ArticleDTO articleDTO){

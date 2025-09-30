@@ -3,6 +3,8 @@ package kr.co.sboard.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import kr.co.sboard.dto.ArticleDTO;
 import kr.co.sboard.dto.FileDTO;
+import kr.co.sboard.dto.PageRequestDTO;
+import kr.co.sboard.dto.PageResponseDTO;
 import kr.co.sboard.service.ArticleService;
 import kr.co.sboard.service.FileService;
 import lombok.RequiredArgsConstructor;
@@ -23,11 +25,11 @@ public class ArticleController {
     private final FileService fileService;
 
     @GetMapping("/article/list")
-    public String list(Model model){
+    public String list(Model model, PageRequestDTO pageRequestDTO){
 
-        //List<ArticleDTO> dtoList = articleService.getArticleAll();
+        PageResponseDTO pageResponseDTO = articleService.getArticleAll(pageRequestDTO);
 
-        //model.addAttribute("dtoList", dtoList);
+        model.addAttribute(pageResponseDTO);
 
         return "article/list";
     }

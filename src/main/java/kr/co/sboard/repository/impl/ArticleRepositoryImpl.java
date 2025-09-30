@@ -42,7 +42,10 @@ public class ArticleRepositoryImpl implements ArticleRepositoryCustom {
                                                 .fetch();
 
         // 전체 게시물 갯수
-        long total = jpaQueryFactory.select(qArticle.count()).from(qArticle).fetchOne();
+        Long total = jpaQueryFactory
+                        .select(qArticle.count())
+                        .from(qArticle)
+                        .fetchOne();
 
 
         return new PageImpl<Tuple>(tupleList, pageable, total);

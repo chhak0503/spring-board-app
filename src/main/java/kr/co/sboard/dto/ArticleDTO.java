@@ -40,4 +40,7 @@ public class ArticleDTO {
         return List.of(file1, file2);
     }
 
+    // 추가필드
+    private String nick;
+
 }
