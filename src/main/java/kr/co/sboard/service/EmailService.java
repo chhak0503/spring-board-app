@@ -1,17 +1,15 @@
 package kr.co.sboard.service;
 
-import com.sun.jdi.event.ExceptionEvent;
 import jakarta.mail.Message;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
 import jakarta.servlet.http.HttpSession;
-import kr.co.sboard.dto.SessionData;
+import kr.co.sboard.dto.SessionDataDTO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.ThreadLocalRandom;
@@ -26,7 +24,9 @@ public class EmailService {
     @Value("${spring.mail.username}")
     private String sender;
 
-    private final SessionData sessionData;
+
+
+    private final SessionDataDTO sessionData;
 
 
     public void sendCode(String receiver){

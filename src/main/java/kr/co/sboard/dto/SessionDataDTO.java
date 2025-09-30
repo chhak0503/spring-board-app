@@ -6,8 +6,8 @@ import org.springframework.web.context.annotation.SessionScope;
 
 @Data
 @Component
-@SessionScope
-public class SessionData {
+@SessionScope // 각 세션(사용자)마다 생성
+public class SessionDataDTO {
 
     private String code;
 }
