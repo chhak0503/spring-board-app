@@ -35,8 +35,8 @@ public class ArticleRepositoryImpl implements ArticleRepositoryCustom {
 
         List<Tuple> tupleList = jpaQueryFactory.select(qArticle, qUser.nick)
                                                 .from(qArticle)
-                                                .join(qUser)
-                                                .on(qArticle.writer.eq(qUser.usid))
+                                                .join(qArticle.user, qUser)
+                                                //.on(qArticle.writer.eq(qUser.usid))
                                                 .offset(pageable.getOffset())
                                                 .limit(pageable.getPageSize())
                                                 .orderBy(qArticle.ano.desc())
@@ -72,8 +72,8 @@ public class ArticleRepositoryImpl implements ArticleRepositoryCustom {
 
         List<Tuple> tupleList = jpaQueryFactory.select(qArticle, qUser.nick)
                 .from(qArticle)
-                .join(qUser)
-                .on(qArticle.writer.eq(qUser.usid))
+                .join(qArticle.user, qUser)
+                //.on(qArticle.writer.eq(qUser.usid))
                 .where(expression)
                 .offset(pageable.getOffset())
                 .limit(pageable.getPageSize())
@@ -84,8 +84,8 @@ public class ArticleRepositoryImpl implements ArticleRepositoryCustom {
         Long total = jpaQueryFactory
                 .select(qArticle.count())
                 .from(qArticle)
-                .join(qUser)
-                .on(qArticle.writer.eq(qUser.usid))
+                .join(qArticle.user, qUser)
+                //.on(qArticle.writer.eq(qUser.usid))
                 .where(expression)
                 .fetchOne();
 

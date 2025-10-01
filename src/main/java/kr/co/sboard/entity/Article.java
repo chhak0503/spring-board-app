@@ -28,7 +28,12 @@ public class Article {
     private int file_cnt;
     private int hit_cnt;
 
-    private String writer;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "writer")
+    private User user;
+    //private String writer;
+
     private String reg_ip;
 
     @CreationTimestamp
@@ -36,7 +41,6 @@ public class Article {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "ano")
     private List<File> fileList;
-
 
 
     // 추가필드

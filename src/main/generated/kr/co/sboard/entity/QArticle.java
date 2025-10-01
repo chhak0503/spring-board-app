@@ -18,6 +18,8 @@ public class QArticle extends EntityPathBase<Article> {
 
     private static final long serialVersionUID = 1310254443L;
 
+    private static final PathInits INITS = PathInits.DIRECT2;
+
     public static final QArticle article = new QArticle("article");
 
     public final NumberPath<Integer> ano = createNumber("ano", Integer.class);
@@ -38,20 +40,29 @@ public class QArticle extends EntityPathBase<Article> {
 
     public final StringPath title = createString("title");
 
+    public final QUser user;
+
     public final DateTimePath<java.time.LocalDateTime> wdate = createDateTime("wdate", java.time.LocalDateTime.class);
 
-    public final StringPath writer = createString("writer");
-
     public QArticle(String variable) {
-        super(Article.class, forVariable(variable));
+        this(Article.class, forVariable(variable), INITS);
     }
 
     public QArticle(Path<? extends Article> path) {
-        super(path.getType(), path.getMetadata());
+        this(path.getType(), path.getMetadata(), PathInits.getFor(path.getMetadata(), INITS));
     }
 
     public QArticle(PathMetadata metadata) {
-        super(Article.class, metadata);
+        this(metadata, PathInits.getFor(metadata, INITS));
+    }
+
+    public QArticle(PathMetadata metadata, PathInits inits) {
+        this(Article.class, metadata, inits);
+    }
+
+    public QArticle(Class<? extends Article> type, PathMetadata metadata, PathInits inits) {
+        super(type, metadata, inits);
+        this.user = inits.isInitialized("user") ? new QUser(forProperty("user")) : null;
     }
 
 }
