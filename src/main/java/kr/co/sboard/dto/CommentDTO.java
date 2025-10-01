@@ -22,5 +22,7 @@ public class CommentDTO {
     private String reg_ip;
     private String wdate;
 
+    // 추가필드
+    private String nick;
 
 }

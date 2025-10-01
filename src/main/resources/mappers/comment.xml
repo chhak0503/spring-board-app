@@ -12,7 +12,10 @@
     </insert>
 
     <select id="selectAll" resultType="kr.co.sboard.dto.CommentDTO">
-        SELECT * FROM SB_COMMENT WHERE ANO=#{ano}
+        SELECT C.*, U.NICK FROM SB_COMMENT C
+        JOIN SB_USER U
+        ON C.WRITER = U.USID
+        WHERE ANO=#{ano}
     </select>
 
     <select id="select" resultType="kr.co.sboard.dto.CommentDTO">

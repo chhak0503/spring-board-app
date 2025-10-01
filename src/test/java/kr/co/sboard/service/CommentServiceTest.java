@@ -17,10 +17,8 @@ class CommentServiceTest {
 
     @Test
     void getCommentAll() {
-
         List<CommentDTO> dtoList = commentService.getCommentAll(5);
         System.out.println(dtoList);
-
     }
 
     @Test
