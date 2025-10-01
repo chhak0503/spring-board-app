@@ -40,8 +40,39 @@
         form.addEventListener('submit', function (e){
             e.preventDefault();
 
+            const jsonData = {
+                "ano": form.ano.value,
+                "writer": form.writer.value,
+                "content": form.content.value
+            };
 
+            fetch('/sboard/comment', {
+                method: 'POST',
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify(jsonData)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    const commentArticle = `<article>
+								                <span class="nick">${data.nick}</span>
+								                <span class="date">${data.wdate}</span>
+								                <p class="content">${data.content}</p>
+								                <div>
+								                    <a href="#" class="remove">삭제</a>
+								                    <a href="#" class="modify">수정</a>
+								                </div>
+								            </article>`;
 
+                    commentList.insertAdjacentHTML('beforeEnd', commentArticle);
+                    empty.remove();
+
+                    // 폼 초기화(입력했던 데이터 비우기)
+                    form.reset();
+                })
+                .catch(err => {
+                    console.log(err);
+                });
         });
     });
 </script>

@@ -23,8 +23,9 @@ public class CommentService {
         return commentMapper.select(cno);
     }
 
-    public void save(CommentDTO commentDTO) {
+    public CommentDTO save(CommentDTO commentDTO) {
         commentMapper.insert(commentDTO);
+        return getComment(commentDTO.getCno());
     }
 
     public void update(CommentDTO commentDTO){

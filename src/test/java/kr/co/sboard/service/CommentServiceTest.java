@@ -28,16 +28,17 @@ class CommentServiceTest {
     @Test
     void save() {
 
-        for(int i=1;i<=10;i++) {
-            CommentDTO commentDTO = CommentDTO.builder()
-                    .ano(14)
-                    .content("14번 댓글 " + i)
-                    .writer("chhak0503")
-                    .reg_ip("127.0.0.1")
-                    .build();
 
-            commentService.save(commentDTO);
-        }
+        CommentDTO commentDTO = CommentDTO.builder()
+                .ano(18)
+                .content("18번 댓글 ")
+                .writer("chhak0503")
+                .reg_ip("127.0.0.1")
+                .build();
+
+        CommentDTO savedCommentDTO = commentService.save(commentDTO);
+        System.out.println(savedCommentDTO);
+
     }
 
     @Test

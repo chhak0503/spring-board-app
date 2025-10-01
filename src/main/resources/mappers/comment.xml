@@ -9,7 +9,12 @@
             (ANO, CONTENT, WRITER, REG_IP, WDATE)
         VALUES
             (#{ano}, #{content}, #{writer}, #{reg_ip}, SYSDATE)
+        RETURNING cno INTO #{cno}
     </insert>
+
+    <select id="select" resultType="kr.co.sboard.dto.CommentDTO">
+        SELECT * FROM SB_COMMENT WHERE CNO=#{cno}
+    </select>
 
     <select id="selectAll" resultType="kr.co.sboard.dto.CommentDTO">
         SELECT C.*, U.NICK FROM SB_COMMENT C
@@ -18,9 +23,7 @@
         WHERE ANO=#{ano}
     </select>
 
-    <select id="select" resultType="kr.co.sboard.dto.CommentDTO">
-        SELECT * FROM SB_COMMENT WHERE CNO=#{cno}
-    </select>
+
 
     <update id="update">
         UPDATE SB_COMMENT SET
