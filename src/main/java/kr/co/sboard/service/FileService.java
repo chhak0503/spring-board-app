@@ -12,8 +12,12 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Slf4j
@@ -71,9 +75,34 @@ public class FileService {
         return fileDTOList;
     }
 
-    public void download(){}
+    public void download(FileDTO fileDTO) {
 
-    public void getFile(){}
+        Path path = Paths.get(uploadPath + File.separator + fileDTO.getSname());
+
+        try {
+            // 파일 컨텐츠 확인
+            String contentType = Files.probeContentType(path);
+
+            
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
+    public FileDTO getFile(int fno){
+
+        Optional<kr.co.sboard.entity.File> optFile = fileRepository.findById(fno);
+        if(optFile.isPresent()){
+            kr.co.sboard.entity.File file = optFile.get();
+            return modelMapper.map(file, FileDTO.class);
+        }
+        return null;
+    }
+
+
     public void getFileAll(){}
 
     public void save(FileDTO fileDTO){
