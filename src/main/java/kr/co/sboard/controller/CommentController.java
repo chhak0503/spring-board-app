@@ -38,8 +38,8 @@ public class CommentController {
         String regip = request.getRemoteAddr();
         commentDTO.setReg_ip(regip);
 
-        commentService.save(commentDTO);
-        return ResponseEntity.ok("success");
+        CommentDTO savedComment = commentService.save(commentDTO);
+        return ResponseEntity.ok(savedComment);
     }
 
     @PutMapping("/comment")
