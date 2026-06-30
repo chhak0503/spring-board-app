@@ -92,7 +92,7 @@ public class UserController {
     public ResponseEntity<Map<String, Integer>> check(@RequestBody Map<String, String> jsonData){
         log.info(jsonData);
 
-        int count = 1;
+        int count = 0;
 
         return ResponseEntity
                 .status(HttpStatus.OK)
