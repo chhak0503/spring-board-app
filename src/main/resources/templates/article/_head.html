@@ -1,0 +1,9 @@
+<header>
+    <h3>
+        <a th:href="@{/}" class="title">스프링 게시판 프로젝트</a>
+    </h3>
+    <p>
+        <a th:href="@{/user/info}" class="info">[[${#authentication.principal.user.nick}]]</a>님 반갑습니다.
+        <a th:href="@{/user/logout}">[로그아웃]</a>
+    </p>
+</header>
