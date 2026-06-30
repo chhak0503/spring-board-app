@@ -21,7 +21,8 @@ public class EmailService {
 
     private final JavaMailSender mailSender;
 
-    public int sendCode(String receiver){
+    public String sendCode(String receiver){
+
         int code = ThreadLocalRandom.current().nextInt(100_000, 1_000_000);
 
         String title = "sbaord 인증코드 입니다.";
@@ -37,7 +38,7 @@ public class EmailService {
         }catch (Exception e){
             log.error(e.getMessage());
         }
-        return code;
+        return String.valueOf(code);
     }
 
     public void verifyCode(){

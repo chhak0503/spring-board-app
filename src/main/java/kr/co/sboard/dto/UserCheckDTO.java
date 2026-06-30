@@ -9,4 +9,6 @@ public class UserCheckDTO {
 
     private String type;
     private String value;
+
+
 }
