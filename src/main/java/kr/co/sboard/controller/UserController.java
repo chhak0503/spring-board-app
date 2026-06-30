@@ -98,7 +98,4 @@ public class UserController {
                 .status(HttpStatus.OK)
                 .body(Map.of("count", count));
     }
-
-
-
 }
