@@ -22,9 +22,8 @@ public class ArticleService {
         return null;
     }
 
-    public int getLastPageNum() {
-        // 전체 글 갯수
-        int total = getTotal();
+    public int getLastPageNum(int total) {
+
 
         // 마지막 페이지 번호
         int lastPageNum = 0;
@@ -42,6 +41,18 @@ public class ArticleService {
         // 목록 LIMIT 시작값
         int start = (page - 1) * 10;
         return start;
+    }
+
+    public int getPageGroupStart(int page){
+        return ((page - 1) / 10) * 10 + 1;
+    }
+
+    public int getPageGroupEnd(int page, int lastPageNum){
+        int end = getPageGroupStart(page) + 9;
+        if(end > lastPageNum){
+            end = lastPageNum;
+        }
+        return end;
     }
 
     public int getTotal(){

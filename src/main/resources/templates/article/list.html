@@ -13,7 +13,7 @@
                 <nav>
                     <h1>
                         전체 글목록
-                        <span>1012건</span>
+                        <span>[[${total}]]건</span>
                     </h1>
                     <form action="search.html">
                         <select name="searchType">
@@ -44,14 +44,24 @@
                 </table>
 
                 <div class="page">
-                    <a href="#" class="prev">이전</a>
-                    <th:block th:each="num:${#numbers.sequence(1, lastPageNum)}">
+
+                    <a th:if="${pageGroupStart > 1}"
+                       th:href="@{/article/list(page=${pageGroupStart - 1})}"
+                       class="prev"
+                    >이전</a>
+
+                    <th:block th:each="num:${#numbers.sequence(pageGroupStart, pageGroupEnd)}">
                         <a th:href="@{/article/list(page=${num})}"
                            class="num"
                            th:classappend="${num == page} ? 'current' : 'off'"
                         >[[${num}]]</a>
                     </th:block>
-                    <a href="#" class="next">다음</a>
+
+                    <a th:if="${pageGroupEnd < lastPageNum}"
+                       th:href="@{/article/list(page=${pageGroupEnd + 1})}"
+                       class="next"
+                    >다음</a>
+
                 </div>
 
                 <a th:href="@{/article/write}" class="btn btnWrite">글쓰기</a>

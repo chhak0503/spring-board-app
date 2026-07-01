@@ -28,8 +28,13 @@ public class ArticleController {
     public String list(Model model, @RequestParam(defaultValue = "1") int page){
         log.info(page);
 
+        // 전체 글 갯수
+        int total = articleService.getTotal();
         int start = articleService.getStart(page);
-        int lastPageNum = articleService.getLastPageNum();
+        int lastPageNum = articleService.getLastPageNum(total);
+
+        int pageGroupStart = articleService.getPageGroupStart(page);
+        int pageGroupEnd = articleService.getPageGroupEnd(page, lastPageNum);
 
         // 목록 데이터 가져오기
         List<ArticleDTO> dtoList = articleService.getAll(start);
@@ -38,7 +43,10 @@ public class ArticleController {
         // 모델 참조
         model.addAttribute("dtoList", dtoList);
         model.addAttribute("lastPageNum", lastPageNum);
+        model.addAttribute("total", total);
         model.addAttribute("page", page);
+        model.addAttribute("pageGroupStart", pageGroupStart);
+        model.addAttribute("pageGroupEnd", pageGroupEnd);
 
         return "/article/list";
     }
