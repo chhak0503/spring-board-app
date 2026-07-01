@@ -25,6 +25,9 @@ public class ArticleDTO {
     private String regip;
     private String wdate;
 
+    // 추가필드
+    private String nick;
+
     // 폼 업로드 파일 객체
     private MultipartFile file1;
     private MultipartFile file2;

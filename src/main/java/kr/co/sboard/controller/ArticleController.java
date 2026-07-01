@@ -11,6 +11,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -23,13 +25,20 @@ public class ArticleController {
     private final FileService fileService;
 
     @GetMapping("/article/list")
-    public String list(Model model){
+    public String list(Model model, @RequestParam(defaultValue = "1") int page){
+        log.info(page);
+
+        int start = articleService.getStart(page);
+        int lastPageNum = articleService.getLastPageNum();
 
         // 목록 데이터 가져오기
-        List<ArticleDTO> dtoList = articleService.getAll();
+        List<ArticleDTO> dtoList = articleService.getAll(start);
+        //List<ArticleDTO> dtoList = articleService.findAll();
 
         // 모델 참조
         model.addAttribute("dtoList", dtoList);
+        model.addAttribute("lastPageNum", lastPageNum);
+        model.addAttribute("page", page);
 
         return "/article/list";
     }

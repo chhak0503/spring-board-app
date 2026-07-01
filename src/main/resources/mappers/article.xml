@@ -8,7 +8,17 @@
     </select>
 
     <select id="selectAll">
-        SELECT * FROM article;
+        SELECT
+            a.*,
+            u.nick
+        FROM article a
+        JOIN user u ON a.writer = u.userid
+        ORDER BY a.ano DESC
+        LIMIT #{start}, 10;
+    </select>
+
+    <select id="selectCountAll">
+        SELECT COUNT(*) FROM article;
     </select>
 
     <insert id="insert">
