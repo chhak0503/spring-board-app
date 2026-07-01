@@ -2,10 +2,13 @@ package kr.co.sboard.service;
 
 import kr.co.sboard.dao.ArticleDAO;
 import kr.co.sboard.dto.ArticleDTO;
+import kr.co.sboard.dto.PageRequestDTO;
 import kr.co.sboard.entity.Article;
 import kr.co.sboard.repository.ArticleRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -69,15 +72,18 @@ public class ArticleService {
         return dtoList;
     }
 
-    public List<ArticleDTO> findAll(){
+    public List<ArticleDTO> findAll(PageRequestDTO pageRequestDTO){
 
-        // JPA
-        List<Article> entityList = repository.findAll();
+        // Pageable은 JPA에서 페이징 처리를 위한 객체
+        Pageable pageable = pageRequestDTO.getPageable("ano");
 
-        List<ArticleDTO> dtoList = entityList
-                .stream()
-                .map(entity -> entity.toDTO())
-                .toList();
+        Page<Article> pageArticle = repository.findAll(pageable);
+
+        List<ArticleDTO> dtoList = pageArticle.getContent()
+                                            .stream()
+                                            .map(entity -> entity.toDTO())
+                                            .toList();
+
         return dtoList;
     }
 
