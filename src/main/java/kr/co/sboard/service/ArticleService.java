@@ -20,8 +20,13 @@ public class ArticleService {
     public ArticleDTO get(int ano){
         return null;
     }
+
     public List<ArticleDTO> getAll(){
-        return null;
+
+        // Mybatis
+        List<ArticleDTO> dtoList = dao.selectAll();
+
+        return dtoList;
     }
 
     public void register(ArticleDTO dto){
