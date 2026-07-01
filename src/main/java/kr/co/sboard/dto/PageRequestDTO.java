@@ -28,7 +28,10 @@ public class PageRequestDTO {
     private String searchType;
     private String keyword;
 
-    public int getOffset(){
+    @Builder.Default
+    private int start = 0;
+
+    public int getStart(){
         return (page - 1) * size;
     }
 

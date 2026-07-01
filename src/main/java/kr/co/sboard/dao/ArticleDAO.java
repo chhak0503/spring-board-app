@@ -1,7 +1,9 @@
 package kr.co.sboard.dao;
 
 import kr.co.sboard.dto.ArticleDTO;
+import kr.co.sboard.dto.PageRequestDTO;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -9,7 +11,7 @@ import java.util.List;
 public interface ArticleDAO {
     public void insert(ArticleDTO dto);
     public ArticleDTO select(int ano);
-    public List<ArticleDTO> selectAll(int start);
+    public List<ArticleDTO> selectAll(@Param("pageRequestDTO") PageRequestDTO pageRequestDTO);
 
     public int selectCountAll();
 

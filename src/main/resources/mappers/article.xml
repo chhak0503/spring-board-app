@@ -14,7 +14,7 @@
         FROM article a
         JOIN user u ON a.writer = u.userid
         ORDER BY a.ano DESC
-        LIMIT #{start}, 10;
+        LIMIT #{pageRequestDTO.start}, 10;
     </select>
 
     <select id="selectCountAll">

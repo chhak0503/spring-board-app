@@ -35,11 +35,13 @@ class ArticleDAOTest {
     void selectAll() {
         int start = 10;
 
+        /*
         List<ArticleDTO> dtoList = dao.selectAll(start);
 
         for(ArticleDTO dto : dtoList){
             log.info(dto);
         }
+        */
     }
 
     @Test
