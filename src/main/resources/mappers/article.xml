@@ -89,6 +89,10 @@
     <update id="update">
     </update>
 
+    <update id="updateHit">
+        UPDATE article SET hit = hit + 1 WHERE ano=#{ano};
+    </update>
+
     <delete id="delete">
     </delete>
 </mapper>

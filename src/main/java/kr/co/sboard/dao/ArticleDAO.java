@@ -16,5 +16,6 @@ public interface ArticleDAO {
     public int selectCountAll(@Param("pageRequestDTO") PageRequestDTO pageRequestDTO);
 
     public void update(ArticleDTO dto);
+    public void updateHit(int ano);
     public void delete(int ano);
 }

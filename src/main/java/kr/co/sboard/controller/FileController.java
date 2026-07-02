@@ -29,7 +29,10 @@ public class FileController {
         log.info(fileDTO);
 
         // 파일 다운로드 스트림 서비스
-        FileDTO downloadedFile = fileService.download(fileDTO);
+        fileDTO = fileService.download(fileDTO);
+
+        // 파일 다운로드 카운트 업데이트
+        fileService.modifyDownloadCount(fileDTO);
 
         // 파일 다운로드 헤더 설정
         HttpHeaders headers = new HttpHeaders();
@@ -40,12 +43,12 @@ public class FileController {
                         .build()
         );
 
-        headers.add(HttpHeaders.CONTENT_TYPE, downloadedFile.getContentType());
+        headers.add(HttpHeaders.CONTENT_TYPE, fileDTO.getContentType());
 
         return ResponseEntity
                 .ok()
                 .headers(headers)
-                .body(downloadedFile.getResource());
+                .body(fileDTO.getResource());
     }
 
 }

@@ -110,6 +110,11 @@ public class ArticleService {
     public void modify(ArticleDTO dto){
 
     }
+
+    public void modifyHit(int ano){
+        dao.updateHit(ano);
+    }
+
     public void remove(int ano){
 
     }

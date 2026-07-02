@@ -118,6 +118,15 @@ public class FileService {
     public void modify(FileDTO dto){
 
     }
+
+    public void modifyDownloadCount(FileDTO fileDTO){
+
+        int count = fileDTO.getDownload();
+        fileDTO.setDownload(count + 1);
+
+        repository.save(fileDTO.toEntity());
+    }
+
     public void remove(int fno){
 
     }

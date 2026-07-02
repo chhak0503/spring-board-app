@@ -70,6 +70,9 @@ public class ArticleController {
         ArticleDTO articleDTO = articleService.find(ano);   // JPA
         log.info(articleDTO);
 
+        // 조회수 업데이트 서비스 호출
+        articleService.modifyHit(ano);
+
         model.addAttribute(articleDTO);
 
         return "/article/view";

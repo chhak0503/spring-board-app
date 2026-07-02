@@ -34,7 +34,6 @@ public class File {
                 .ofname(ofname)
                 .sfname(sfname)
                 .download(download)
-                .rdate(rdate.toString())
                 .build();
     }
 
