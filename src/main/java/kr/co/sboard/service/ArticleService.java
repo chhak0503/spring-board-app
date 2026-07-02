@@ -24,6 +24,13 @@ public class ArticleService {
     private final ArticleRepository repository;
 
     public ArticleDTO get(int ano){
+
+        // Mybatis
+        ArticleDTO articleDTO = dao.select(ano);
+
+        // JPA
+
+
         return null;
     }
 

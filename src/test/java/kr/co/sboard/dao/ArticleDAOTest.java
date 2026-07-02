@@ -24,12 +24,16 @@ class ArticleDAOTest {
 
     @Test
     void select() {
+
+        ArticleDTO articleDTO = dao.select(18);
+
+        log.info(articleDTO);
     }
 
     @Test
     void selectCountAll() {
-        int total = dao.selectCountAll();
-        log.info(total);
+        //int total = dao.selectCountAll();
+        //log.info(total);
     }
 
     @Test

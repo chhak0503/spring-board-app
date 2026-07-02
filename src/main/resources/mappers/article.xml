@@ -4,7 +4,40 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.sboard.dao.ArticleDAO">
 
-    <select id="select">
+    <!-- resultMap은 Mybatis의 조회결과를 DTO와 컬럼을 맵핑하기 위한 태그설정 -->
+    <resultMap id="articleMap" type="kr.co.sboard.dto.ArticleDTO">
+        <id property="ano" column="ano"/>
+        <result property="type" column="type"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="comment" column="comment"/>
+        <result property="file" column="file"/>
+        <result property="hit" column="hit"/>
+        <result property="writer" column="writer"/>
+        <result property="regip" column="regip"/>
+        <result property="wdate" column="wdate"/>
+        <result property="nick" column="nick"/>
+
+        <!-- List 속성을 바인딩하는 Mybatis collection -->
+        <collection property="fileList" ofType="kr.co.sboard.dto.FileDTO">
+            <id property="fno" column="fno"/>
+            <result property="ano" column="ano"/>
+            <result property="ofname" column="ofname"/>
+            <result property="sfname" column="sfname"/>
+            <result property="download" column="download"/>
+            <result property="rdate" column="rdate"/>
+        </collection>
+    </resultMap>
+
+    <select id="select" resultMap="articleMap"><!-- 조회결과를 articleMap으로 출력 -->
+        SELECT
+        a.*,
+        u.nick,
+        f.*
+        FROM article a
+        JOIN user u ON a.writer = u.userid
+        LEFT JOIN file f ON a.ano = f.ano
+        WHERE a.ano=#{ano};
     </select>
 
     <sql id="searchWhere">

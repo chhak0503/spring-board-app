@@ -62,7 +62,14 @@ public class ArticleController {
     }
 
     @GetMapping("/article/view")
-    public String view(){
+    public String view(int ano, Model model){
+        log.info(ano);
+
+        // 서비스 호출
+        ArticleDTO articleDTO = articleService.get(ano);
+
+        model.addAttribute(articleDTO);
+
         return "/article/view";
     }
 

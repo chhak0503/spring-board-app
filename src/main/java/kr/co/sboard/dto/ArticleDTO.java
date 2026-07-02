@@ -27,6 +27,7 @@ public class ArticleDTO {
 
     // 추가필드
     private String nick;
+    private List<FileDTO> fileList;
 
     // 폼 업로드 파일 객체
     private MultipartFile file1;
@@ -35,7 +36,6 @@ public class ArticleDTO {
     public List<MultipartFile> getFiles(){
         return List.of(file1, file2);
     }
-
 
     public Article toEntity(){
         return Article.builder()

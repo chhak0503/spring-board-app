@@ -36,7 +36,7 @@
                     </tr>                    
                     <tr th:each="dto, stat:${pageResponseDTO.dtoList}">
                         <td>[[${pageResponseDTO.startNo - stat.index}]]</td>
-                        <td><a th:href="@{/article/view}">[[${dto.title}]]&nbsp;&#91;[[${dto.comment}]]&#93;</a></td>
+                        <td><a th:href="@{/article/view(ano=${dto.ano})}">[[${dto.title}]]&nbsp;&#91;[[${dto.comment}]]&#93;</a></td>
                         <td>[[${dto.nick}]]</td>
                         <td>[[${dto.wdate.substring(2, 16)}]]</td>
                         <td>[[${dto.hit}]]</td>
