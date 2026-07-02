@@ -41,7 +41,7 @@ class ArticleRepositoryTest {
             ArticleDTO articleDTO = entity.toDTO();
             articleDTO.setFileList(dtoFileList);
 
-            log.info(articleDTO);
+            log.info(entity);
         }
     }
 

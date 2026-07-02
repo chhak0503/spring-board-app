@@ -52,6 +52,7 @@ public class Article {
                 .file(file)
                 .hit(hit)
                 .nick(user.getNick())
+                .writer(user.getUserid())
                 .regip(regip)
                 .wdate(wdate.toString())
                 .build();
