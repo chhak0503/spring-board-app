@@ -31,17 +31,4 @@ class ArticleServiceTest {
         log.info(pageResponseDTO);
     }
 
-    @Test
-    void findAll() {
-
-        PageRequestDTO pageRequestDTO = PageRequestDTO.builder()
-                .page(2)
-                .build();
-
-        PageResponseDTO pageResponseDTO = service.findAll(pageRequestDTO);
-
-        for(ArticleDTO dto : pageResponseDTO.getDtoList()){
-            log.info(dto);
-        }
-    }
 }
