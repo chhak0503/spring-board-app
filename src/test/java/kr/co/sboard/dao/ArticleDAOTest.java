@@ -24,8 +24,7 @@ class ArticleDAOTest {
 
     @Test
     void select() {
-
-        ArticleDTO articleDTO = dao.select(18);
+        ArticleDTO articleDTO = dao.select(2);
 
         log.info(articleDTO);
     }

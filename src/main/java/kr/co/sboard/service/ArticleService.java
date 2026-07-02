@@ -2,9 +2,11 @@ package kr.co.sboard.service;
 
 import kr.co.sboard.dao.ArticleDAO;
 import kr.co.sboard.dto.ArticleDTO;
+import kr.co.sboard.dto.FileDTO;
 import kr.co.sboard.dto.PageRequestDTO;
 import kr.co.sboard.dto.PageResponseDTO;
 import kr.co.sboard.entity.Article;
+import kr.co.sboard.entity.File;
 import kr.co.sboard.entity.User;
 import kr.co.sboard.repository.ArticleRepository;
 import lombok.RequiredArgsConstructor;
@@ -14,6 +16,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Log4j2
 @RequiredArgsConstructor
@@ -24,15 +27,34 @@ public class ArticleService {
     private final ArticleRepository repository;
 
     public ArticleDTO get(int ano){
-
         // Mybatis
         ArticleDTO articleDTO = dao.select(ano);
 
+        return articleDTO;
+    }
+
+    public ArticleDTO find(int ano){
         // JPA
+        Optional<Article> optArticle = repository.findById(ano);
 
+        if(optArticle.isPresent()){
+            Article entity = optArticle.get();
 
+            List<File> entityFileList = entity.getFileList();
+
+            List<FileDTO> dtoFileList = entityFileList.stream()
+                                                        .map(fileEntity -> fileEntity.toDTO())
+                                                        .toList();
+
+            ArticleDTO articleDTO = entity.toDTO();
+            articleDTO.setFileList(dtoFileList);
+
+            log.info(articleDTO);
+            return articleDTO;
+        }
         return null;
     }
+
 
     public PageResponseDTO getAll(PageRequestDTO pageRequestDTO){
         // Mybatis

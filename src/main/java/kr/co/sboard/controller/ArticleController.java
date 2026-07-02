@@ -66,7 +66,9 @@ public class ArticleController {
         log.info(ano);
 
         // 서비스 호출
-        ArticleDTO articleDTO = articleService.get(ano);
+        //ArticleDTO articleDTO = articleService.get(ano);  // Mybatis
+        ArticleDTO articleDTO = articleService.find(ano);   // JPA
+        log.info(articleDTO);
 
         model.addAttribute(articleDTO);
 
