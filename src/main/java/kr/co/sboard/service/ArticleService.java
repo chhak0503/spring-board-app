@@ -100,8 +100,11 @@ public class ArticleService {
                 .build();
     }
 
-    public void register(ArticleDTO dto){
+    public int register(ArticleDTO dto){
         dao.insert(dto);
+
+        // 매퍼 dao에 인자로 전달되는 dto의 속성 ano에 pk값 초기화
+        return dto.getAno();
     }
 
     public void modify(ArticleDTO dto){

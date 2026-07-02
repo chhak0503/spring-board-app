@@ -5,6 +5,7 @@
 <mapper namespace="kr.co.sboard.dao.FileDAO">
 
     <select id="select">
+        SELECT * FROM file WHERE fno=#{fno};
     </select>
 
     <select id="selectAll">

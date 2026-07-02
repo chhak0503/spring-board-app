@@ -9,7 +9,7 @@ import java.util.List;
 
 @Mapper
 public interface ArticleDAO {
-    public void insert(ArticleDTO dto);
+    public int insert(ArticleDTO dto);
     public ArticleDTO select(int ano);
     public List<ArticleDTO> selectAll(@Param("pageRequestDTO") PageRequestDTO pageRequestDTO);
 

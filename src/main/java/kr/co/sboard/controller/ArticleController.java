@@ -81,7 +81,7 @@ public class ArticleController {
     }
 
     @PostMapping("/article/write")
-    public String write(ArticleDTO articleDTO, HttpServletRequest req){
+    public String write(ArticleDTO articleDTO, HttpServletRequest req) {
         log.info(articleDTO);
 
         String regip = req.getRemoteAddr();
@@ -94,7 +94,11 @@ public class ArticleController {
         articleDTO.setFile(fileList.size());
 
         // 글등록
-        articleService.register(articleDTO);
+        int ano = articleService.register(articleDTO);
+        log.info("ano = {}", ano);
+
+        // 파일 등록
+        fileService.register(fileList, ano);
 
         return "redirect:/article/list";
     }

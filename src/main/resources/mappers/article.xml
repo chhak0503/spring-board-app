@@ -75,7 +75,7 @@
         <include refid="searchWhere"/>
     </select>
 
-    <insert id="insert">
+    <insert id="insert" useGeneratedKeys="true" keyProperty="ano">
         INSERT INTO article SET
                         type='free',
                         title=#{title},

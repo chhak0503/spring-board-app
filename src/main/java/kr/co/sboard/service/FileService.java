@@ -9,10 +9,16 @@ import kr.co.sboard.repository.FileRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+
 import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -71,18 +77,43 @@ public class FileService {
         return fileList;
     }
 
-    public void download(){
+    public FileDTO download(FileDTO fileDTO){
 
+        Path path = Paths.get(fileUploadPath + File.separator + fileDTO.getSfname());
+
+        try {
+            // 파일 컨텐츠타입 확인
+            String contentType = Files.probeContentType(path);
+
+            // 파일 자원 객체
+            Resource resource = new InputStreamResource(Files.newInputStream(path));
+
+            // DTO 다운로드 파일 관련 속성 초기화
+            fileDTO.setContentType(contentType);
+            fileDTO.setResource(resource);
+
+        }catch (Exception e){
+            log.error(e.getMessage());
+        }
+
+        return fileDTO;
     }
 
     public FileDTO get(int fno){
-        return null;
+        FileDTO fileDTO = dao.select(fno);
+        return fileDTO;
     }
+
     public List<FileDTO> getAll(){
         return null;
     }
-    public void register(FileDTO dto){
 
+    public void register(List<FileDTO> fileList, int ano){
+
+        for(FileDTO fileDTO : fileList){
+            fileDTO.setAno(ano);
+            repository.save(fileDTO.toEntity());
+        }
     }
     public void modify(FileDTO dto){
 
