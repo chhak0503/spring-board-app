@@ -20,11 +20,16 @@ public class PageResponseDTO {
     private int start, end;
     private boolean prev, next;
 
+    private String searchType, keyword;
+
     @Builder
     public PageResponseDTO(PageRequestDTO pageRequestDTO, List<ArticleDTO> dtoList, int total){
         this.type = pageRequestDTO.getType();
         this.page = pageRequestDTO.getPage();
         this.size = pageRequestDTO.getSize();
+
+        this.searchType = pageRequestDTO.getSearchType();
+        this.keyword = pageRequestDTO.getKeyword();
 
         this.total = total;
         this.dtoList = dtoList;

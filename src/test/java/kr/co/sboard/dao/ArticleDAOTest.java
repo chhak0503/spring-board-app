@@ -1,6 +1,7 @@
 package kr.co.sboard.dao;
 
 import kr.co.sboard.dto.ArticleDTO;
+import kr.co.sboard.dto.PageRequestDTO;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +34,17 @@ class ArticleDAOTest {
 
     @Test
     void selectAll() {
-        int start = 10;
+
+        PageRequestDTO pageRequestDTO = PageRequestDTO.builder()
+                                        //.searchType("writer")
+                                        //.keyword("유신")
+                                        .build();
+
+        List<ArticleDTO> dtoList = dao.selectAll(pageRequestDTO);
+
+        for(ArticleDTO dto : dtoList){
+            log.info(dto);
+        }
 
         /*
         List<ArticleDTO> dtoList = dao.selectAll(start);

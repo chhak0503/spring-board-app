@@ -31,9 +31,13 @@ public class ArticleController {
         log.info(pageRequestDTO);
 
         // 목록 데이터 가져오기
-        PageResponseDTO pageResponseDTO = articleService.getAll(pageRequestDTO);
-        //PageResponseDTO pageResponseDTO = articleService.findAll(pageRequestDTO);
-        
+
+        // Mybatis
+        //PageResponseDTO pageResponseDTO = articleService.getAll(pageRequestDTO);
+
+        // JPA
+        PageResponseDTO pageResponseDTO = articleService.findAll(pageRequestDTO);
+
         // 모델 참조
         model.addAttribute(pageResponseDTO);
 
@@ -46,7 +50,14 @@ public class ArticleController {
     }
 
     @GetMapping("/article/search")
-    public String search(){
+    public String search(PageRequestDTO pageRequestDTO, Model model){
+        log.info(pageRequestDTO);
+
+        // 서비스 호출
+        PageResponseDTO pageResponseDTO = articleService.getAll(pageRequestDTO);
+        // 모델참조
+        model.addAttribute(pageResponseDTO);
+
         return "/article/search";
     }
 

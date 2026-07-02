@@ -27,46 +27,11 @@ public class ArticleService {
         return null;
     }
 
-    public int getLastPageNum(int total) {
-        // 마지막 페이지 번호
-        int lastPageNum = 0;
-
-        if(total % 10 == 0){
-            lastPageNum = total / 10;
-        }else {
-            lastPageNum = total / 10 + 1;
-        }
-
-        return lastPageNum;
-    }
-
-    public int getStart(int page){
-        // 목록 LIMIT 시작값
-        int start = (page - 1) * 10;
-        return start;
-    }
-
-    public int getPageGroupStart(int page){
-        return ((page - 1) / 10) * 10 + 1;
-    }
-
-    public int getPageGroupEnd(int page, int lastPageNum){
-        int end = getPageGroupStart(page) + 9;
-        if(end > lastPageNum){
-            end = lastPageNum;
-        }
-        return end;
-    }
-
-    public int getTotal(){
-        return dao.selectCountAll();
-    }
-
     public PageResponseDTO getAll(PageRequestDTO pageRequestDTO){
         // Mybatis
         List<ArticleDTO> dtoList = dao.selectAll(pageRequestDTO);
 
-        int total = dao.selectCountAll();
+        int total = dao.selectCountAll(pageRequestDTO);
 
         return PageResponseDTO.builder()
                 .pageRequestDTO(pageRequestDTO)

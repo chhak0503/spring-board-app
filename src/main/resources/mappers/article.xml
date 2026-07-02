@@ -7,18 +7,39 @@
     <select id="select">
     </select>
 
+    <sql id="searchWhere">
+        <where>
+            <if test="pageRequestDTO.searchType != null and pageRequestDTO.keyword != null">
+                <choose>
+                    <when test="pageRequestDTO.searchType == 'title'">
+                        AND a.title LIKE CONCAT('%', #{pageRequestDTO.keyword}, '%')
+                    </when>
+                    <when test="pageRequestDTO.searchType == 'content'">
+                        AND a.content LIKE CONCAT('%', #{pageRequestDTO.keyword}, '%')
+                    </when>
+                    <when test="pageRequestDTO.searchType == 'writer'">
+                        AND u.nick LIKE CONCAT('%', #{pageRequestDTO.keyword}, '%')
+                    </when>
+                </choose>
+            </if>
+        </where>
+    </sql>
+
     <select id="selectAll">
         SELECT
             a.*,
             u.nick
         FROM article a
         JOIN user u ON a.writer = u.userid
+        <include refid="searchWhere"/>
         ORDER BY a.ano DESC
         LIMIT #{pageRequestDTO.start}, 10;
     </select>
 
     <select id="selectCountAll">
-        SELECT COUNT(*) FROM article;
+        SELECT COUNT(*) FROM article a
+        JOIN user u ON a.writer = u.userid
+        <include refid="searchWhere"/>
     </select>
 
     <insert id="insert">

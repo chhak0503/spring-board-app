@@ -38,9 +38,9 @@ class ArticleServiceTest {
                 .page(2)
                 .build();
 
-        List<ArticleDTO> dtoList = service.findAll(pageRequestDTO);
+        PageResponseDTO pageResponseDTO = service.findAll(pageRequestDTO);
 
-        for(ArticleDTO dto : dtoList){
+        for(ArticleDTO dto : pageResponseDTO.getDtoList()){
             log.info(dto);
         }
     }

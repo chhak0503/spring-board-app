@@ -13,7 +13,7 @@ public interface ArticleDAO {
     public ArticleDTO select(int ano);
     public List<ArticleDTO> selectAll(@Param("pageRequestDTO") PageRequestDTO pageRequestDTO);
 
-    public int selectCountAll();
+    public int selectCountAll(@Param("pageRequestDTO") PageRequestDTO pageRequestDTO);
 
     public void update(ArticleDTO dto);
     public void delete(int ano);
