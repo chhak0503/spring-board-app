@@ -39,6 +39,8 @@ public class CommentService {
         Comment entity = dto.toEntity();
 
         Comment savedComment = repository.save(entity);
+        log.info("savedComment = {}", savedComment);
+
 
         return savedComment.toDTO();
     }
@@ -48,6 +50,6 @@ public class CommentService {
 
     }
     public void remove(int cno){
-
+        repository.deleteById(cno);
     }
 }

@@ -44,5 +44,14 @@ public class CommentController {
         return ResponseEntity.ok(savedComment);
     }
 
+    @GetMapping("/comment/remove")
+    public ResponseEntity<Map<String, Boolean>> remove(int cno){
+        log.info("cno = {}", cno);
+
+        commentService.remove(cno);
+
+        return ResponseEntity.ok(Map.of("result", true));
+    }
+
 
 }

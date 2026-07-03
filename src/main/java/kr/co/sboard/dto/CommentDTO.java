@@ -1,6 +1,7 @@
 package kr.co.sboard.dto;
 
 import kr.co.sboard.entity.Comment;
+import kr.co.sboard.entity.User;
 import lombok.*;
 
 @Getter
@@ -22,11 +23,16 @@ public class CommentDTO {
     private String nick;
 
     public Comment toEntity(){
+
+        User user = User.builder()
+                .userid(writer)
+                .build();
+
         return Comment.builder()
                 .cno(cno)
                 .parent(parent)
                 .content(content)
-                //.writer(writer)
+                .user(user)
                 .regip(regip)
                 .build();
     }
