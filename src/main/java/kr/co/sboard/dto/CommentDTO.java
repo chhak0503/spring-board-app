@@ -18,12 +18,15 @@ public class CommentDTO {
     private String regip;
     private String wdate;
 
+    // 추가필드
+    private String nick;
+
     public Comment toEntity(){
         return Comment.builder()
                 .cno(cno)
                 .parent(parent)
                 .content(content)
-                .writer(writer)
+                //.writer(writer)
                 .regip(regip)
                 .build();
     }

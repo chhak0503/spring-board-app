@@ -21,7 +21,11 @@ public class Comment {
     private int cno;
     private int parent;
     private String content;
-    private String writer;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "writer")
+    private User user;
+
     private String regip;
 
     @CreationTimestamp
@@ -32,7 +36,8 @@ public class Comment {
                 .cno(cno)
                 .parent(parent)
                 .content(content)
-                .writer(writer)
+                .writer(user.getUserid())
+                .nick(user.getNick())
                 .regip(regip)
                 .wdate(wdate.toString())
                 .build();

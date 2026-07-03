@@ -31,7 +31,6 @@ public class CommentController {
         return ResponseEntity.ok(dtoList);
     }
 
-
     @PostMapping("/comment/write")
     public ResponseEntity<CommentDTO> write(@RequestBody CommentDTO commentDTO, HttpServletRequest req){
         log.info(commentDTO);
