@@ -4,6 +4,7 @@ import kr.co.sboard.dao.ArticleDAO;
 import kr.co.sboard.dao.CommentDAO;
 import kr.co.sboard.dto.ArticleDTO;
 import kr.co.sboard.dto.CommentDTO;
+import kr.co.sboard.entity.Comment;
 import kr.co.sboard.repository.ArticleRepository;
 import kr.co.sboard.repository.CommentRepository;
 import lombok.RequiredArgsConstructor;
@@ -26,9 +27,17 @@ public class CommentService {
     public List<CommentDTO> getAll(){
         return null;
     }
-    public void register(CommentDTO dto){
 
+    public CommentDTO register(CommentDTO dto){
+
+        Comment entity = dto.toEntity();
+
+        Comment savedComment = repository.save(entity);
+
+        return savedComment.toDTO();
     }
+
+
     public void modify(CommentDTO dto){
 
     }
