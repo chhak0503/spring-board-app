@@ -24,8 +24,14 @@ public class CommentService {
     public CommentDTO get(int cno){
         return null;
     }
-    public List<CommentDTO> getAll(){
-        return null;
+
+    public List<CommentDTO> getAll(int parent){
+
+        List<Comment> entityList = repository.findAllByParent(parent);
+
+        return entityList.stream()
+                .map(entity -> entity.toDTO())
+                .toList();
     }
 
     public CommentDTO register(CommentDTO dto){

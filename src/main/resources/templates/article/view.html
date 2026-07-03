@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="../css/style.css"/>
     <script>
 
-        document.addEventListener('DOMContentLoaded', function(){
-
+        document.addEventListener('DOMContentLoaded', async function(){
+            /////////////////////////////////////////////////
             // 댓글 등록
+            /////////////////////////////////////////////////
             const form = document.formComment;
 
             form.addEventListener('submit', async function(e){
@@ -34,6 +35,15 @@
                 const data = await response.json();
                 console.log(data);
             });
+
+            /////////////////////////////////////////////////
+            // 댓글 목록 요청
+            /////////////////////////////////////////////////
+            const parent = form.parent.value;
+
+            const response = await fetch(`/comment/list?parent=${parent}`);
+            const data = await response.json();
+            console.log(data);
 
 
         });
